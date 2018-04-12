@@ -12,6 +12,7 @@ target/
 .project/
 .classpath/
 .classpath
+.project
 
 #idea ignore
 .idea/
