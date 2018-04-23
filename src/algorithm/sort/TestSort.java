@@ -11,9 +11,9 @@ public class TestSort {
 	public static void main(String[] args) {
 		Map<String, Map<Integer, Long>> map = new LinkedHashMap<String, Map<Integer,Long>>();
 		init(map);
-		int i = 10_000_000;
-		int n = 100_000_000;
-		int step = 10_000_000;
+		int i = 100_000_000;
+		int n = 500_000_000;
+		int step = 100_000_000;
 		long s = 0;
 		long e = 0;
 		int num = 1;
@@ -27,28 +27,28 @@ public class TestSort {
 			
 			System.out.println("---------------------------第  "+ num++ +" 次，数据量：" + i + "----------------------------");
 			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			insertSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("插入排序时间：" + (e - s));
-			map.get("insertSort").put(i, (e - s));
-			//print(result);
-			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			bubbleSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("冒泡排序时间：" + (e - s));
-			map.get("bubbleSort").put(i, (e - s));
-			//print(result);
-			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			selectSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("选择排序时间：" + (e - s));
-			map.get("selectSort").put(i, (e - s));
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			insertSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("插入排序时间：" + (e - s));
+//			map.get("insertSort").put(i, (e - s));
+//			//print(result);
+//			
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			bubbleSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("冒泡排序时间：" + (e - s));
+//			map.get("bubbleSort").put(i, (e - s));
+//			//print(result);
+//			
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			selectSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("选择排序时间：" + (e - s));
+//			map.get("selectSort").put(i, (e - s));
 			//print(result);
 			
 			System.arraycopy(source, 0, result, 0, source.length);
@@ -59,21 +59,21 @@ public class TestSort {
 			map.get("ArraysSort").put(i, (e - s));
 			//print(result);
 
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			result = mergeSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("归并排序1时间：" + (e - s));
-			map.get("mergeSort").put(i, (e - s));
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			result = mergeSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("归并排序1时间：" + (e - s));
+//			map.get("mergeSort").put(i, (e - s));
 			//print(result);
 
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			mergeSort2(result, 0, result.length - 1);
-			e = System.currentTimeMillis();
-			System.out.println("归并排序2时间：" + (e - s));
-			map.get("mergeSort2").put(i, (e - s));
-			//print(result);
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			mergeSort2(result, 0, result.length - 1);
+//			e = System.currentTimeMillis();
+//			System.out.println("归并排序2时间：" + (e - s));
+//			map.get("mergeSort2").put(i, (e - s));
+//			//print(result);
 			
 			System.arraycopy(source, 0, result, 0, source.length);
 			s = System.currentTimeMillis();
@@ -99,29 +99,31 @@ public class TestSort {
 			map.get("quickSort3").put(i, (e - s));
 			//print(result);
 			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			heapSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("堆排序时间：" + (e - s));
-			map.get("heapSort").put(i, (e - s));
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			heapSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("堆排序时间：" + (e - s));
+//			map.get("heapSort").put(i, (e - s));
 			//print(result);
 			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			shellSort(result);
-			e = System.currentTimeMillis();
-			System.out.println("希尔排序1时间：" + (e - s));
-			map.get("shellSort").put(i, (e - s));
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			shellSort(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("希尔排序1时间：" + (e - s));
+//			map.get("shellSort").put(i, (e - s));
 			//print(result);
 			
-			System.arraycopy(source, 0, result, 0, source.length);
-			s = System.currentTimeMillis();
-			shellSort2(result);
-			e = System.currentTimeMillis();
-			System.out.println("希尔排序2时间：" + (e - s));
-			map.get("shellSort2").put(i, (e - s));
+//			System.arraycopy(source, 0, result, 0, source.length);
+//			s = System.currentTimeMillis();
+//			shellSort2(result);
+//			e = System.currentTimeMillis();
+//			System.out.println("希尔排序2时间：" + (e - s));
+//			map.get("shellSort2").put(i, (e - s));
 			//print(result);
+			result = null;
+			source = null;
 		}
 		
 		printResult(map);
