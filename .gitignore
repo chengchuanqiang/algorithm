@@ -11,8 +11,6 @@ target/
 .settings/
 .project/
 .classpath/
-.classpath
-.project
 
 #idea ignore
 .idea/
